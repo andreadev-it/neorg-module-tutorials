@@ -1,6 +1,6 @@
 # How to create custom Neorg modules - part 2
 
-In the first part of this tutorial, we've created our first module. Now, let's see how we can make it more generic and use a configuration value that can be customized by the user.
+In the part 1 of this tutorial, we've created our first module. Now, let's see how we can make it more generic and use a configuration value that can be customized by the user.
 
 Our current module looks like this:
 
