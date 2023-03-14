@@ -16,7 +16,7 @@ end
 return module
 ```
 
-We now want to cahnge it so that the user can pass a name to be greeted when opening neovim.
+We now want to change it so that the user can pass a name to be greeted when opening neovim.
 
 The goal is to have something like this:
 
