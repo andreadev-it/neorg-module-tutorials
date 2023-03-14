@@ -1,7 +1,9 @@
+# How to create custom Neorg modules - part 1
+
 This series of tutorials will help you better understand how to create
 custom modules for Neorg.
 
-# Create a local plugin
+## Create a local plugin
 
 Before starting to work on the module, let's take a look at how to create a
 local neovim plugin and at the folder structure that we'll need to make this module
@@ -10,7 +12,7 @@ work within Neorg.
 First of all, create a folder for your project. In my case, it will be
 `~/projects/my-neorg-module`.
 
-# Choosing a name
+## Choosing a name
 
 Once we've created the plugin folder, we have to choose a name for our module.
 We have to do it now because it will have an impact on the naming of our 
@@ -33,7 +35,7 @@ When naming our modules, let's keep in mind these conventions:
   
   In our example, we will call it `external.hello-world`.
 
-# Folder structure
+## Folder structure
 
 Inside the plugin root, we will have the usual `lua` folder.
 Inside this folder, we need to create a basic structure, that is always the same for
@@ -44,11 +46,11 @@ Inside the `modules` folder, we'll need to create the folders nested as our new 
 name would suggest. That means, we'll need to create an `external` folder with a `hello-world` folder inside.
 Here is a picture of our final plugin structure:
 
-![Neorg plugin file structure](./plugin-folder-structure.png)
+![Neorg plugin file structure](./assets/plugin-folder-structure.png)
 
 The `module.lua` file is where the logic and api for our modules will be located.
 
-# A basic `module.lua`
+## A basic `module.lua`
 
 For our first module, we're going to do the usual "Hello World!" exercise, and create 
 a module that will print the message when loaded.
@@ -83,7 +85,7 @@ end
 return module
 ```
 
-# Adding it to Neorg
+## Adding it to Neorg
 
 With our first module ready, we can add it to our Neorg configuration.
 
@@ -127,9 +129,9 @@ use {
 }
 ```
 
-# Result
+## Result
 
 With the module added to the configuration, we should see a "Hello world!" message when we open neovim.
 Of course, this is not very useful. To make a useful module, we're going to need a way to interact with the user.
 
-We're going to see how to do that in our next tutorial.
+We're going to see how to do that in our [next tutorial](./part-2.md).
