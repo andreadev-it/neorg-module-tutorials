@@ -125,4 +125,4 @@ This is a function that let us react to the events when they fire. It gets an `e
 
 ## Coming next
 
-We'll use some of the functionalities shown above to create a new module that will print the Treesitter tree for the node that is under our cursor. This page will be updated with a link to it as soon as it's released.
+We'll use some of the functionalities shown above to create a new module that will print the Treesitter tree for the node that is under our cursor. [This is the link](./part-3.md) to the next part.
