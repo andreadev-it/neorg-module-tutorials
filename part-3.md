@@ -1,4 +1,4 @@
-# How to create custom Neorg modules - part 2
+# How to create custom Neorg modules - part 3
 
 In part 2 of this tutorial, we've seen some of the options we can use in our module, now let's apply it in practice. 
 
