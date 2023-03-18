@@ -1,8 +1,8 @@
 # How to create custom Neorg modules - part 3
 
-In part 2 of this tutorial, we've seen some of the options we can use in our module, now let's apply it in practice. 
+In part 2 of this tutorial, we've seen some of the options we can use in our module, now let's apply them in practice. 
 
-We'll create a new module that will print the treesitter tree for the node we're currently on with our cursor. To do it, we'll need to setup a new subcommand for Neorg and listen for that new event when it is triggered.
+We'll create a new module that will print the treesitter tree for the node we're currently on with our cursor. To do it, we'll need to setup a new subcommand for Neorg and listen for that event when it is triggered.
 
 ## Creating a new module
 
@@ -10,7 +10,7 @@ Let's create our new module within the same neovim plugin that we've already use
 
 Here it is our new file structure:
 
-![./assets/plugin-folder-structure-2.png](Our new folder structure)
+![Our new folder structure](./assets/plugin-folder-structure-2.png) 
 
 There is no limit for how many modules we can have inside the same neovim plugin, in fact, there are a ton of modules inside the Neorg plugin as well!
 
