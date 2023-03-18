@@ -14,12 +14,12 @@ Here it is our new file structure:
 
 There is no limit for how many modules we can have inside the same neovim plugin, in fact, there are a ton of modules inside the Neorg plugin as well!
 
-Now, we'll clean up our module, removing the code inside the `module.load` function. then, we can also remove the `name` option. An option that could be useful and that the user might want to edit, could be a `separator` option. Right now, our code looks like this:
+Now, we'll clean up our module, removing the code inside the `module.load` function. Let's also change the module name inside the `create` function and set it to `show-ts-tree`. Then, we can also remove the `name` option. An option that could be useful and that the user might want to edit, could be a `separator` option, so let's add that. Right now, our code looks like this:
 
 ```lua
 require('neorg.modules.base')
 
-local module = neorg.modules.create('external.hello-world')
+local module = neorg.modules.create('external.show-ts-tree') 
 
 module.config.public = {
     separator = '→'
@@ -44,6 +44,7 @@ module.setup = function ()
 end
 ```
 
+You can require as many modules as you want just by adding them to this table. 
 After having required the module, we can use its APIs to add a new command within the `module.load` function. Here it is the code for it:
 
 ```lua
@@ -58,7 +59,7 @@ module.load = function ()
 end
 ```
 
-the `add_commands_from_table` method allows us to create new commands that will be run when typing: `:Neorg my-command`. In this table, all  keys are new commands, and the value set up some configuration for each command. In this case, we're adding a `show-ts-tree` command, that takes no arguments (`args = 0`), will only be run in norg files (`condition = 'norg'`) and will trigger an event called `external.show-ts-tree.show`.
+The `add_commands_from_table` method allows us to create new commands that will be run when typing: `:Neorg my-command`. In this table, all  keys are new commands, and the values are configuration tables for each command. In this case, we're adding a `show-ts-tree` command, that takes no arguments (`args = 0`), will only be run in norg files (`condition = 'norg'`) and will trigger an event called `external.show-ts-tree.show`.
 
 Now we've added a new command, but we won't be able to use it unless we first subscribe to it. We can do it with the `module.events.subscribed` option. Let's add this code to our module:
 
