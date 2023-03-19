@@ -151,7 +151,7 @@ local node = ts_utils.get_node_at_cursor()
 -- Extract the tree from the `document` to the current node
 local tree = module.private.get_node_tree(node)
 
--- Convert the typescript nodes to their types
+-- Convert the treesitter nodes to their types
 local tree_types = module.private.get_types(tree)
 
 -- Get the separator from the config, or set it as a single space
