@@ -3,6 +3,10 @@
 This series of tutorials will help you better understand how to create
 custom modules for Neorg.
 
+**Warning for v.5:** This tutorial was recently updated to reflect the changes that were
+made with PR #1001 in neorg (august 2023). This means that, if you haven't done it yet,
+you should update your neorg installation to follow this tutorial.
+
 ## Create a local plugin
 
 Before starting to work on the module, let's take a look at how to create a
@@ -55,10 +59,10 @@ The `module.lua` file is where the logic and api for our modules will be located
 For our first module, we're going to do the usual "Hello World!" exercise, and create 
 a module that will print the message when loaded.
 
-To create a new module, we need to require `neorg.modules.base` and use the Neorg api to create a new module:
+To create a new module, we need to require `neorg.core` and use the Neorg api to create a new module:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require('neorg.core')
 
 local module = neorg.modules.create('external.hello-world')
 ```
@@ -74,7 +78,7 @@ end
 In the end, we need to return the module. The complete code looks like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require('neorg.core')
 
 local module = neorg.modules.create('external.hello-world')
 

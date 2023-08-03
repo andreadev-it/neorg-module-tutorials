@@ -5,7 +5,7 @@ In the part 1 of this tutorial, we've created our first module. Now, let's see h
 Our current module looks like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require("neorg.core")
 
 local module = neorg.modules.create('external.hello-world')
 
@@ -75,7 +75,7 @@ This will result in "Hello Andrea!" being printed in the message box.
 The complete code for the `module.lua` file will now look like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require("neorg.core")
 
 local module = neorg.modules.create('external.hello-world')
 

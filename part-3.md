@@ -17,7 +17,7 @@ There is no limit for how many modules we can have inside the same neovim plugin
 Now, we'll clean up our module, removing the code inside the `module.load` function. Let's also change the module name inside the `create` function and set it to `show-ts-tree`. Then, we can also remove the `name` option. An option that could be useful and that the user might want to edit, could be a `separator` option, so let's add that. Right now, our code looks like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require("neorg.core")
 
 local module = neorg.modules.create('external.show-ts-tree') 
 
@@ -90,7 +90,7 @@ Inside this `if` statement, we're calling a private method that we still need to
 Our code currently looks like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require("neorg.core")
 
 local module = neorg.modules.create('external.show-ts-tree')
 
@@ -168,7 +168,7 @@ There are many ways of interacting with treesitter,  but the easiest one is prob
 Now, let's fill in the other functionalities. The completed code looks like this:
 
 ```lua
-require('neorg.modules.base')
+local neorg = require("neorg.core")
 
 local module = neorg.modules.create('external.show-ts-tree')
 
